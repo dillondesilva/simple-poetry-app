@@ -1,6 +1,6 @@
 import math
 
-class Vector2:
+class Vector3:
     def __init__(self, x, y, z):
         # x and y components of a vector
         self.x = x;
@@ -9,7 +9,7 @@ class Vector2:
 
         # Magnitude and direction of vector object.
         # Direction is a radian measure bearing 
-        self.magnitude = math.sqrt((x^2) + (y^2) + (z^2));
+        self.magnitude = math.sqrt((x*x) + (y*y) + (z*z));
         self.directionX = math.cos(x / self.magnitude);
         self.directionY = math.cos(y / self.magnitude);
         self.directionZ = math.cos(z / self.magnitude);
@@ -27,7 +27,7 @@ class VectorOperations:
         resY = a.y + b.y;
         resZ = a.z + b.z;
 
-        resultantVector = Vector2(resX, resY, resZ);
+        resultantVector = Vector3(resX, resY, resZ);
         return resultantVector
 
    # Subtract two vectors, a and b
@@ -36,11 +36,11 @@ class VectorOperations:
         resY = a.y - b.y;
         resZ = a.z - b.z;
 
-        resultantVector = Vector2(resX, resY, resZ);
+        resultantVector = Vector3(resX, resY, resZ);
         return resultantVector 
 
-a = Vector2(10, 12, 15)
-b = Vector2(10, 12, 15)
+a = Vector3(10, 12, 15)
+b = Vector3(10, 12, 15)
 
 result = VectorOperations.addVectors(a, b)
 result.showDetails()

@@ -1,3 +1,3 @@
 __version__ = '0.1.0'
 
-from .main import Vector2, VectorOperations
+from .main import Vector3, VectorOperations
